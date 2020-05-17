@@ -5,9 +5,13 @@
   "dependencies": {
     "npm-test-single-file": "https://gist.github.com/isaacs/1837112/raw/9ef57a59fc22aeb1d1ca346b68826dcb638b8416/index.js",
     "glob": "git://github.com/isaacs/node-glob.git#npm-test",
-    "minimatch": "~0.1.0"
+    "minimatch": "~0.1.0",
+    "snyk": "^1.321.0"
   },
   "scripts": {
-    "test": "node test.js"
-  }
+    "test": "node test.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
